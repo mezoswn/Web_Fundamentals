@@ -1,0 +1,77 @@
+SELECT address.city_id AS city_id, customer.first_name AS first_name, customer.last_name AS last_name, customer.email, address.address, city.city AS city, country.country As country
+FROM customer
+JOIN address ON customer.address_id = address.address_id
+JOIN city ON address.address_id = city.city_id
+JOIN country ON city.country_id = country.country_id
+WHERE address.city_id = 312
+
+******************************
+
+SELECT film.film_id, film.title, film.DESCRIPTION, film.release_year, film.rating, film.special_features, 
+category.NAME AS genre
+FROM category
+LEFT JOIN film_category ON category.category_id = film_category.category_id
+LEFT JOIN film ON film_category.film_id = film.film_id
+WHERE category.NAME = 'Comedy'
+
+*******************************
+
+SELECT actor.actor_id, CONCAT(actor.first_name, " ", actor.last_name) AS actor_name, film.title, film.description, film.release_year
+FROM actor
+JOIN film_actor ON actor.actor_id = film_actor.actor_id
+JOIN film ON film_actor.film_id = film.film_id
+WHERE actor.actor_id=5;
+
+*******************************
+
+SELECT  customer.first_name, customer.last_name, customer.email, address.address 
+FROM customer
+JOIN address ON customer.address_id = address.address_id 
+WHERE customer.store_id = 1 AND (address.city_id=1 or address.city_id=42 or address.city_id=312 or address.city_id=459);
+
+*******************************
+SELECT  film.title, film.description, film.release_year, film.rating, film.special_features
+FROM actor
+JOIN film_actor ON actor.actor_id = film_actor.actor_id
+JOIN film ON film_actor.film_id = film.film_id
+WHERE actor.actor_id=15 AND film.rating='G' AND special_features LIKE '%Behind the Scenes';
+
+********************************
+
+SELECT film.film_id, CONCAT(actor.first_name, " ", actor.last_name) AS actor_name, actor.actor_id, film.title
+FROM actor
+JOIN film_actor ON actor.actor_id = film_actor.actor_id
+JOIN film ON film_actor.film_id = film.film_id
+WHERE film.film_id=369;
+
+********************************
+
+SELECT  film.title, film.DESCRIPTION, film.release_year, film.rating, film.special_features, category.name
+FROM film
+JOIN film_category ON film.film_id = film_category.film_id
+JOIN category ON film_category.category_id=category.category_id
+WHERE film.rental_rate=2.99 AND category.name='Drama';
+
+********************************
+
+SELECT  film.title, film.DESCRIPTION, film.release_year, film.rating, film.special_features, category.name, CONCAT(actor.first_name, " ", actor.last_name) AS actor_name
+FROM film
+JOIN film_category ON film.film_id = film_category.film_id
+JOIN category ON film_category.category_id=category.category_id
+JOIN film_actor ON film.film_id = film_actor.film_id
+JOIN actor ON film_actor.actor_id = actor.actor_id
+WHERE actor.first_name = 'SANDRA' AND actor.last_name = 'KILMER' AND category.name = 'Action' ;
+
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& ANOTHER solution for this
+
+SELECT film.title, film.description, film.release_year, film.rating, film.special_features, category.name,actor.first_name,actor.last_name 
+FROM film, film_category, category, film_actor, actor 
+WHERE film.film_id = film_category.film_id AND film_category.category_id = category.category_id 
+AND film.film_id = film_actor.film_id AND film_actor.actor_id = actor.actor_id 
+AND category.name = 'action' AND actor.first_name ='Sandra' AND actor.last_name = 'Kilmer';
+
+
+
+
+
+

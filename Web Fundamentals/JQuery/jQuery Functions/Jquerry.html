@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Jquery</title>
+        <style>
+            .red{
+                color: red;
+            }
+        </style>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+        <script>
+       $(document).ready(function(){
+
+            alert('you are now working in Jquery!');
+
+       $('#Add').click(function(){
+        $('#P1').addClass('red');
+
+
+       });
+       $('#Tog').click(function(){
+        $( ".p2" ).toggle( "slow" );
+       
+
+
+       }) ;
+       $('#app').click(function(){
+        $(".p3").append( "<strong>Hello</strong>" );
+        
+
+
+       }) 
+        
+
+
+        }); 
+        </script> 
+        <!-- <script>console.log($);
+        </script>
+        <script>console.log($());
+        </script> -->
+    </head>
+    <body>
+      <div class="Addclass">
+        <h1> AddClass</h1>
+       
+        <button id="Add"> Click here to Add Class</button> 
+        <p id="P1">click the Button to add class 'red' to this paragraph</p>
+
+      </div>
+      <div class="SlideToggle">
+        <h1> SlideToggle</h1>
+        <p class="p2">click the Button to slidetoggle a hidden image</p>
+        <button id="Tog"> Click here to Slide Toggle</button>
+        <!-- <img id="book" src="ninja.gif" alt="" width="100" height="123"> -->
+    </div>
+      <div class="last">
+        <h1> Append</h1>
+        <p class='p3'>click the Button to append a new paragraph</p>
+        <button id="app"> Click here to Append</button>
+      </div>
+
+      
+    </body>
+</html>

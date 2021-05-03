@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Registration Form</title>
+    <h1>My Registration Form</h1>
+        <form action="process.php" method="post">
+            <h2>Please Register</h2>
+
+                <p>
+                    <b><label for="first_name">First Name:</label></b>
+                    <input type="text" id="first_name" name="first_name">
+                </p>
+
+                <p> 
+                    <b><label for="last_name">Last Name:</label></b>
+                    <input type="text" id="last_name" name="last_name"> 
+                </p>    
+        
+                <p>
+                    <b><label for="email">Email:</label></b>
+                    <input type="text" id="email" name="email">
+                </p>
+
+                <p>
+                    <b>Birthday date:</b>
+                    <input type="date" id="birthday" name="birthday">
+                </p>
+            
+        
+                <p>
+                    <b>Select your gender:</b>
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender" value="male">
+
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    
+                    <label for="decline">Prefer not to say</label>
+                    <input type="radio" id="decline" name="gender" value="decline">
+                </p>
+        
+            
+                <p>
+                    <label for="password"><b>Password:</b></label>
+                    <input type="password" id="password" name="password">
+                </p>
+                <p>
+                    <label for="pw_confirm"><b>Password Confirmation:</b></label>
+                    <input type="password" id="pw_confirm" name="password_confirmation">
+                </p>
+                <p><b>Say a few words about yourself:</b></p>
+                    <textarea name="description"></textarea>
+                <p>
+                    <label for="Language"><b>Choose your Favorite Language:</b></label>
+                        <select name="Language" id="Language">
+                            <option value="Javascript">Javascript</option>
+                            <option value="CSS">CSS</option>
+                            <option value="HTML">HTML</option>
+                            <option value="C++">C++</option>
+                            <option value="others">others</option>
+                        </select>
+                        
+                </p>
+            
+            
+        
+        <p><input type="submit" value="Click here to register"></p>
+        </form>
+
+</body>
+</html>

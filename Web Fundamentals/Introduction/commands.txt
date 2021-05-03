@@ -1,0 +1,112 @@
+
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop
+$ mkdir new_directory_Test
+
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop
+$ touch index.html
+touch sty
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop
+$ touch style.css
+
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop
+$ touch commands.txt
+
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop
+$ cp index.html copy.html
+
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop
+$ cd new_directory_Test
+
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop/new_directory_Test
+$ touch index.html
+
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop/new_directory_Test
+$ touch style.css
+
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop/new_directory_Test
+$ touch commands.txt
+
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop/new_directory_Test
+$ cp index.html index_2.html
+
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop/new_directory_Test
+$ cd
+
+mswei@Moaths-LAPTOP MINGW64 ~
+$ cd Desktop
+
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop
+$ mkdir destination
+
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop
+$ cd new_directory_Test
+
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop/new_directory_Test
+$ mv index_2.html ../destination
+
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop/new_directory_Test
+$ rm style.css
+
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop/new_directory_Test
+$ ls
+commands.txt  index.html
+
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop/new_directory_Test
+$ cd destination
+bash: cd: destination: No such file or directory
+
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop/new_directory_Test
+$ cd..
+bash: cd..: command not found
+
+mswei@Moaths-LAPTOP MINGW64 ~/Desktop/new_directory_Test
+$ cd
+
+mswei@Moaths-LAPTOP MINGW64 ~
+$ cd desktop
+
+mswei@Moaths-LAPTOP MINGW64 ~/desktop
+$ cd destination
+
+mswei@Moaths-LAPTOP MINGW64 ~/desktop/destination
+$ ls
+index_2.html
+
+mswei@Moaths-LAPTOP MINGW64 ~/desktop/destination
+$ cd desktop
+bash: cd: desktop: No such file or directory
+
+mswei@Moaths-LAPTOP MINGW64 ~/desktop/destination
+$ cd
+
+mswei@Moaths-LAPTOP MINGW64 ~
+$ cd desktop
+
+mswei@Moaths-LAPTOP MINGW64 ~/desktop
+$ rm destination
+rm: cannot remove 'destination': Is a directory
+
+mswei@Moaths-LAPTOP MINGW64 ~/desktop
+$ rm desrm -rf destination
+
+mswei@Moaths-LAPTOP MINGW64 ~/desktop
+$ cd new_directory_Test
+
+mswei@Moaths-LAPTOP MINGW64 ~/desktop/new_directory_Test
+$ cd command.txt
+bash: cd: command.txt: No such file or directory
+
+mswei@Moaths-LAPTOP MINGW64 ~/desktop/new_directory_Test
+$ open . commands.txt
+bash: open: command not found
+
+mswei@Moaths-LAPTOP MINGW64 ~/desktop/new_directory_Test
+$ cd commands.txt
+bash: cd: commands.txt: Not a directory
+
+mswei@Moaths-LAPTOP MINGW64 ~/desktop/new_directory_Test
+$ open . commands.txt
+bash: open: command not found
+
+mswei@Moaths-LAPTOP MINGW64 ~/desktop/new_directory_Test
+$

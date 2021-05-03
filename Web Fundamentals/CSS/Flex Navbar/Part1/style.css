@@ -1,0 +1,26 @@
+
+.center-box{
+    background-color: blue;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.center-item{
+   
+    width: 100px;
+    height: 100px;
+    background-color: beige;
+    display: flex;
+    
+   
+    
+
+}
+/*.ul{
+    /* fle */
+    /*display: flex;
+    align-items: stretch;
+    justify-content:right;

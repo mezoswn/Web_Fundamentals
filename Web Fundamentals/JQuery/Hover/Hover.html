@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment: Disappearing Ninja</title>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+        <script>
+            $(document).ready(function(){
+                
+                // $('img').click(function(){
+                // $(this).hide();
+                // })
+
+            //     $('img').hover(function(){
+			// 	$(this).hide();
+			// },function(){
+			// 	$(this).css('color', 'black');
+			// }); 
+
+            alert('you are now working in Jquery!');
+                $('img').hover(function() {
+                    var x = $(this).attr('data-alt-src');
+                 $(this).attr('data-alt-src', $(this).attr('src'));
+                 $(this).attr('src',x);
+                });
+     
+    })
+        </script> 
+        <style>
+            img {
+                width:300px;
+                height: 200px;
+            }
+        </style>
+      
+    </head>
+    <body>
+        <img src='Ninja.png' data-alt-src='images.jfif' />
+        <img src='Ninja.png' data-alt-src='images.jfif' />
+        <img src='Ninja.png' data-alt-src='images.jfif' />
+        <img src='Ninja.png' data-alt-src='images.jfif' />
+        <!-- <img src='Ninja.png' data-alt-src='images.jfif' />
+        <img src='images.jfif' data-alt-src='Ninja.png' /> -->
+        <img src='images.jfif' data-alt-src='Ninja.png' />
+        <img src='images.jfif' data-alt-src='Ninja.png' />
+        <img src='images.jfif' data-alt-src='Ninja.png' />
+        <img src='images.jfif' data-alt-src='Ninja.png' />
+      
+      
+
+
+      
+    </body>
+</html>

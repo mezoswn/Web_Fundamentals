@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment: Disappearing Ninja</title>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+        <script>
+            $(document).ready(function(){
+                alert('you are now working in Jquery!');
+                $('img').click(function() {
+                    var x = $(this).attr('data-alt-src');
+                 $(this).attr('data-alt-src', $(this).attr('src'));
+                 $(this).attr('src',x);
+                });
+
+                
+
+       
+        }); 
+        </script> 
+        <style>
+            img{
+                display: block;
+                margin-bottom: 2px;
+            }
+        </style>
+        
+      
+    </head>
+    <body>
+        <img src='ninja0.png' data-alt-src='cat0.png' />
+        <img src='ninja1.png' data-alt-src='cat1.png' />
+        <img src='ninja2.png' data-alt-src='cat2.png' />
+        <img src='ninja3.png' data-alt-src='cat3.png' />
+        <img src='ninja4.png' data-alt-src='cat4.png' />
+
+    </body>
+</html>
